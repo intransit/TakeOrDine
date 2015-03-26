@@ -20,6 +20,8 @@ namespace TakeOrDine.Models
         }
 
         public System.Data.Entity.DbSet<TakeOrDine.Models.UserInfo> UserInfoes { get; set; }
+
+        public System.Data.Entity.DbSet<TakeOrDine.Models.DB.host> hosts { get; set; }
     
     }
 }

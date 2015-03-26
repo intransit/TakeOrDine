@@ -49,6 +49,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -118,6 +120,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\hostsController.cs" />
     <Compile Include="Controllers\UserInfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -128,6 +131,11 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppDbContext.cs" />
+    <Compile Include="Models\DB\Attendee.cs" />
+    <Compile Include="Models\DB\Event.cs" />
+    <Compile Include="Models\DB\Guest.cs" />
+    <Compile Include="Models\DB\host.cs" />
+    <Compile Include="Models\DB\TakeOrDineDbContext.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -172,6 +180,11 @@
     <Content Include="Views\UserInfo\Details.cshtml" />
     <Content Include="Views\UserInfo\Edit.cshtml" />
     <Content Include="Views\UserInfo\Index.cshtml" />
+    <Content Include="Views\hosts\Create.cshtml" />
+    <Content Include="Views\hosts\Delete.cshtml" />
+    <Content Include="Views\hosts\Details.cshtml" />
+    <Content Include="Views\hosts\Edit.cshtml" />
+    <Content Include="Views\hosts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
