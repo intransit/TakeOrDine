@@ -118,6 +118,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HostProfilesController.cs" />
     <Compile Include="Controllers\UserInfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -126,8 +127,13 @@
     <Compile Include="Migrations\201503170654488_Initial.Designer.cs">
       <DependentUpon>201503170654488_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201503260248175_Initial1.cs" />
+    <Compile Include="Migrations\201503260248175_Initial1.Designer.cs">
+      <DependentUpon>201503260248175_Initial1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppDbContext.cs" />
+    <Compile Include="Models\HostProfile.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -172,6 +178,11 @@
     <Content Include="Views\UserInfo\Details.cshtml" />
     <Content Include="Views\UserInfo\Edit.cshtml" />
     <Content Include="Views\UserInfo\Index.cshtml" />
+    <Content Include="Views\HostProfiles\Create.cshtml" />
+    <Content Include="Views\HostProfiles\Delete.cshtml" />
+    <Content Include="Views\HostProfiles\Details.cshtml" />
+    <Content Include="Views\HostProfiles\Edit.cshtml" />
+    <Content Include="Views\HostProfiles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -186,6 +197,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201503170654488_Initial.resx">
       <DependentUpon>201503170654488_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201503260248175_Initial1.resx">
+      <DependentUpon>201503260248175_Initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
