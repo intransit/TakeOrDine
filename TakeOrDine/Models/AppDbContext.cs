@@ -17,11 +17,9 @@ namespace TakeOrDine.Models
     
         public AppDbContext() : base("name=AppDbContext")
         {
+            
         }
 
         public System.Data.Entity.DbSet<TakeOrDine.Models.UserInfo> UserInfoes { get; set; }
-
-        public System.Data.Entity.DbSet<TakeOrDine.Models.DB.host> hosts { get; set; }
-    
     }
 }

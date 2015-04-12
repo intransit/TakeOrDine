@@ -1,0 +1,46 @@
+# Everything outside the TakeOrDine directory
+/*
+/*/
+!/TakeOrDine/
+
+# Build generated files in TakeOrDine
+/TakeOrDine/**/objd/**/*
+/TakeOrDine/**/obj/**/*
+/TakeOrDine/bin/**/*
+/TakeOrDine/**/gen/**/*
+/TakeOrDine/**/*.nuspec
+/TakeOrDine/**/StyleCop.Cache
+/bin/*
+# Files created by VS for Cloud Service projects
+/TakeOrDine/**/csx/**
+/TakeOrDine/**/rcf/**
+
+# MSBuild's log file
+msbuild.log
+
+# VSMSBuild generated files in CoreXT
+*.projhash*
+*.user
+*.slnhash*
+*.suo
+
+# Toolset generated files
+
+# Build.exe
+*.err
+*.wrn
+*.log
+*.prf
+*.trc
+*.dll
+*.xml
+
+buildd.dbb
+build.dbb
+buildd.evt
+build.evt
+
+BuildSessionInfo.json
+TakeOrDine/QBuildResultStats.txt
+
+QLogs

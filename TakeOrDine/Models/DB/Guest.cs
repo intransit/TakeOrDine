@@ -18,15 +18,12 @@ namespace TakeOrDine.Models.DB
 
         public string Email { get; set; }
 
-        public int? PhoneNumber { get; set; }
-
-        public int EventId { get; set; }
+        [StringLength(50)]
+        public string PhoneNumber { get; set; }
 
         [Required]
         public string Name { get; set; }
 
         public virtual ICollection<Attendee> Attendees { get; set; }
-
-        public virtual Event Event { get; set; }
     }
 }

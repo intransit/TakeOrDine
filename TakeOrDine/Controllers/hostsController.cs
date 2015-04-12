@@ -13,7 +13,7 @@ namespace TakeOrDine.Controllers
 {
     public class hostsController : Controller
     {
-        private AppDbContext db = new AppDbContext();
+        private TakeOrDineDbContext db = new TakeOrDineDbContext();
 
         // GET: hosts
         public ActionResult Index()
