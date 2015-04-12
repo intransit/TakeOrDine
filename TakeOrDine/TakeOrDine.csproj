@@ -143,9 +143,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="AzureStorageHelpers\ImageStorageHelpers.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\HostProfilesController.cs" />
     <Compile Include="Controllers\hostsController.cs" />
-    <Compile Include="Controllers\UserInfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -153,13 +151,6 @@
     <Compile Include="Migrations\201503170654488_Initial.Designer.cs">
       <DependentUpon>201503170654488_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201503260248175_Initial1.cs" />
-    <Compile Include="Migrations\201503260248175_Initial1.Designer.cs">
-      <DependentUpon>201503260248175_Initial1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AppDbContext.cs" />
-    <Compile Include="Models\HostProfile.cs" />
     <Compile Include="Models\DB\Attendee.cs" />
     <Compile Include="Models\DB\Guest.cs" />
     <Compile Include="Models\DB\host.cs" />
@@ -204,16 +195,6 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\UserInfo\Create.cshtml" />
-    <Content Include="Views\UserInfo\Delete.cshtml" />
-    <Content Include="Views\UserInfo\Details.cshtml" />
-    <Content Include="Views\UserInfo\Edit.cshtml" />
-    <Content Include="Views\UserInfo\Index.cshtml" />
-    <Content Include="Views\HostProfiles\Create.cshtml" />
-    <Content Include="Views\HostProfiles\Delete.cshtml" />
-    <Content Include="Views\HostProfiles\Details.cshtml" />
-    <Content Include="Views\HostProfiles\Edit.cshtml" />
-    <Content Include="Views\HostProfiles\Index.cshtml" />
     <Content Include="Views\hosts\Create.cshtml" />
     <Content Include="Views\hosts\Delete.cshtml" />
     <Content Include="Views\hosts\Details.cshtml" />
@@ -235,9 +216,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201503170654488_Initial.resx">
       <DependentUpon>201503170654488_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503260248175_Initial1.resx">
-      <DependentUpon>201503260248175_Initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
