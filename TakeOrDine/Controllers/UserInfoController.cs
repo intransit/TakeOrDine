@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using TakeOrDine.AzureStorageHelpers;
 using TakeOrDine.Models;
 
 namespace TakeOrDine.Controllers
@@ -17,6 +19,11 @@ namespace TakeOrDine.Controllers
         // GET: UserInfo
         public ActionResult Index()
         {
+            var test = new ImageStorageHelpers();
+            test.UploadPicture(PictureType.Event, 4, @"C:\Trash\1.jpg");
+            test.UploadPicture(PictureType.Event, 4, @"C:\Trash\2.jpg");
+            //test.DownloadPicture(PictureType.Event, 4);
+            test.DeletePicture(PictureType.Event, 4);
             return View(db.UserInfoes.ToList());
         }
 

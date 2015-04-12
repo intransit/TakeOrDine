@@ -11,7 +11,7 @@ namespace TakeOrDine.Models.DB
     {
         public host()
         {
-            Events = new HashSet<Event>();
+            Profiles = new HashSet<Profile>();
         }
 
         public int HostId { get; set; }
@@ -29,6 +29,23 @@ namespace TakeOrDine.Models.DB
 
         public string Bio { get; set; }
 
-        public virtual ICollection<Event> Events { get; set; }
+        [StringLength(10)]
+        public string State { get; set; }
+
+        [StringLength(50)]
+        public string Zipcode { get; set; }
+
+        [StringLength(50)]
+        public string City { get; set; }
+
+        public string Street { get; set; }
+
+        [StringLength(50)]
+        public string UnitNumber { get; set; }
+
+        [StringLength(50)]
+        public string PhoneNumber { get; set; }
+
+        public virtual ICollection<Profile> Profiles { get; set; }
     }
 }

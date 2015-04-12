@@ -13,52 +13,18 @@ namespace TakeOrDine.Models.DB
         }
 
         public virtual DbSet<Attendee> Attendees { get; set; }
-        public virtual DbSet<Event> Events { get; set; }
         public virtual DbSet<Guest> Guests { get; set; }
         public virtual DbSet<host> hosts { get; set; }
+        public virtual DbSet<Profile> Profiles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Attendee>()
-                .Property(e => e.State)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Attendee>()
-                .Property(e => e.DineType)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Event>()
-                .Property(e => e.Name)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Event>()
-                .Property(e => e.Description)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Event>()
-                .Property(e => e.DineType)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Event>()
-                .Property(e => e.Location)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Event>()
-                .Property(e => e.MenuInCsv)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<Event>()
-                .HasMany(e => e.Attendees)
-                .WithRequired(e => e.Event)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<Event>()
-                .HasMany(e => e.Guests)
-                .WithRequired(e => e.Event)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<Guest>()
                 .Property(e => e.Email)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Guest>()
+                .Property(e => e.PhoneNumber)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Guest>()
@@ -87,8 +53,41 @@ namespace TakeOrDine.Models.DB
                 .IsUnicode(false);
 
             modelBuilder.Entity<host>()
-                .HasMany(e => e.Events)
+                .Property(e => e.State)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<host>()
+                .Property(e => e.Zipcode)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<host>()
+                .Property(e => e.City)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<host>()
+                .Property(e => e.Street)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<host>()
+                .Property(e => e.UnitNumber)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<host>()
+                .Property(e => e.PhoneNumber)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<host>()
+                .HasMany(e => e.Profiles)
                 .WithRequired(e => e.host)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Profile>()
+                .Property(e => e.DineType)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Profile>()
+                .HasMany(e => e.Attendees)
+                .WithRequired(e => e.Profile)
                 .WillCascadeOnDelete(false);
         }
     }

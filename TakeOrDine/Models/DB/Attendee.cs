@@ -10,22 +10,12 @@ namespace TakeOrDine.Models.DB
     {
         public int AttendeeId { get; set; }
 
-        public int EventId { get; set; }
+        public int ProfileId { get; set; }
 
         public int GuestId { get; set; }
 
-        [Required]
-        [StringLength(128)]
-        public string State { get; set; }
-
-        [Required]
-        [StringLength(128)]
-        public string DineType { get; set; }
-
-        public int PartySize { get; set; }
-
-        public virtual Event Event { get; set; }
-
         public virtual Guest Guest { get; set; }
+
+        public virtual Profile Profile { get; set; }
     }
 }

@@ -161,9 +161,9 @@
     <Compile Include="Models\AppDbContext.cs" />
     <Compile Include="Models\HostProfile.cs" />
     <Compile Include="Models\DB\Attendee.cs" />
-    <Compile Include="Models\DB\Event.cs" />
     <Compile Include="Models\DB\Guest.cs" />
     <Compile Include="Models\DB\host.cs" />
+    <Compile Include="Models\DB\Profile.cs" />
     <Compile Include="Models\DB\TakeOrDineDbContext.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
