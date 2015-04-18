@@ -2108,11 +2108,15 @@ fieldset[disabled] .btn-default.active {
 
 .LoveToCookLandingImage {
     background-image: url('../Content/images/loveToCook.jpg');
+    width: 165px; 
+    height: 165px; 
 }
 
 .LoveToEatLandingImage {
     background-image: url('../Content/images/loveToEat.jpg');
     background-size: cover;
+    width: 165px; 
+    height: 165px;
 }
 
 .btn-primary {
