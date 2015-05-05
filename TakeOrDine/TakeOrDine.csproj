@@ -144,6 +144,7 @@
     <Compile Include="AzureStorageHelpers\ImageStorageHelpers.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\hostsController.cs" />
+    <Compile Include="Controllers\ProfilesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -211,6 +212,11 @@
     <Content Include="Views\hosts\Details.cshtml" />
     <Content Include="Views\hosts\Edit.cshtml" />
     <Content Include="Views\hosts\Index.cshtml" />
+    <Content Include="Views\Profiles\Create.cshtml" />
+    <Content Include="Views\Profiles\Delete.cshtml" />
+    <Content Include="Views\Profiles\Details.cshtml" />
+    <Content Include="Views\Profiles\Edit.cshtml" />
+    <Content Include="Views\Profiles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
