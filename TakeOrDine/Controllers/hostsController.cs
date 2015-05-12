@@ -18,7 +18,7 @@ namespace TakeOrDine.Controllers
         // GET: hosts
         public ActionResult Index()
         {
-            return View(db.hosts.ToList());
+            return View(db.Hosts.ToList());
         }
 
         // GET: hosts/Details/5
@@ -28,7 +28,7 @@ namespace TakeOrDine.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            host host = db.hosts.Find(id);
+            host host = db.Hosts.Find(id);
             if (host == null)
             {
                 return HttpNotFound();
@@ -51,7 +51,7 @@ namespace TakeOrDine.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.hosts.Add(host);
+                db.Hosts.Add(host);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -66,7 +66,7 @@ namespace TakeOrDine.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            host host = db.hosts.Find(id);
+            host host = db.Hosts.Find(id);
             if (host == null)
             {
                 return HttpNotFound();
@@ -97,7 +97,7 @@ namespace TakeOrDine.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            host host = db.hosts.Find(id);
+            host host = db.Hosts.Find(id);
             if (host == null)
             {
                 return HttpNotFound();
@@ -110,8 +110,8 @@ namespace TakeOrDine.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            host host = db.hosts.Find(id);
-            db.hosts.Remove(host);
+            host host = db.Hosts.Find(id);
+            db.Hosts.Remove(host);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

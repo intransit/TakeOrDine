@@ -9,11 +9,6 @@ namespace TakeOrDine.Models.DB
     [Table("Guest")]
     public partial class Guest
     {
-        public Guest()
-        {
-            Attendees = new HashSet<Attendee>();
-        }
-
         public int GuestId { get; set; }
 
         public string Email { get; set; }
@@ -23,7 +18,5 @@ namespace TakeOrDine.Models.DB
 
         [Required]
         public string Name { get; set; }
-
-        public virtual ICollection<Attendee> Attendees { get; set; }
     }
 }

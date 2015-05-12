@@ -151,10 +151,9 @@
     <Compile Include="Migrations\201503170654488_Initial.Designer.cs">
       <DependentUpon>201503170654488_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\DB\Attendee.cs" />
     <Compile Include="Models\DB\Guest.cs" />
     <Compile Include="Models\DB\host.cs" />
-    <Compile Include="Models\DB\Profile.cs" />
+    <Compile Include="Models\DB\ManageListing.cs" />
     <Compile Include="Models\DB\TakeOrDineDbContext.cs" />
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
