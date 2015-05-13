@@ -11,7 +11,7 @@ namespace TakeOrDine.Models.DB
     {
         public host()
         {
-            Profiles = new HashSet<Profile>();
+            ManageListing = new HashSet<ManageListing>();
         }
 
         public int HostId { get; set; }
@@ -46,6 +46,10 @@ namespace TakeOrDine.Models.DB
         [StringLength(50)]
         public string PhoneNumber { get; set; }
 
-        public virtual ICollection<Profile> Profiles { get; set; }
+        public int? ReviewsCount { get; set; }
+
+        public double? Rating { get; set; }
+
+        public virtual ICollection<ManageListing> ManageListing { get; set; }
     }
 }
