@@ -28,7 +28,8 @@ namespace TakeOrDine.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            host host = db.Hosts.Find(id);
+
+            var host = db.Hosts.Find(id);
             if (host == null)
             {
                 return HttpNotFound();
@@ -47,7 +48,7 @@ namespace TakeOrDine.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "HostId,Email,Name,specialityInCsv,Bio")] host host)
+        public ActionResult Create([Bind(Include = "HostId,Email,Name,specialityInCsv,Bio")] Host host)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +67,8 @@ namespace TakeOrDine.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            host host = db.Hosts.Find(id);
+            
+            var host = db.Hosts.Find(id);
             if (host == null)
             {
                 return HttpNotFound();
@@ -79,7 +81,7 @@ namespace TakeOrDine.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "HostId,Email,Name,specialityInCsv,Bio")] host host)
+        public ActionResult Edit([Bind(Include = "HostId,Email,Name,specialityInCsv,Bio")] Host host)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +99,8 @@ namespace TakeOrDine.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            host host = db.Hosts.Find(id);
+            
+            var host = db.Hosts.Find(id);
             if (host == null)
             {
                 return HttpNotFound();
@@ -110,7 +113,7 @@ namespace TakeOrDine.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            host host = db.Hosts.Find(id);
+            var host = db.Hosts.Find(id);
             db.Hosts.Remove(host);
             db.SaveChanges();
             return RedirectToAction("Index");

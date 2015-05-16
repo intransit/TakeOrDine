@@ -6,14 +6,14 @@ namespace TakeOrDine.Models.DB
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("host")]
-    public partial class host
+    public partial class Host
     {
-        public host()
+        public Host()
         {
-            ManageListing = new HashSet<ManageListing>();
+            ManageListings = new HashSet<ManageListing>();
         }
 
+        [Key]
         public int HostId { get; set; }
 
         [Required]
@@ -50,6 +50,6 @@ namespace TakeOrDine.Models.DB
 
         public double? Rating { get; set; }
 
-        public virtual ICollection<ManageListing> ManageListing { get; set; }
+        public virtual ICollection<ManageListing> ManageListings { get; set; }
     }
 }

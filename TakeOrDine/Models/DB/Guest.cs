@@ -6,9 +6,14 @@ namespace TakeOrDine.Models.DB
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Guest")]
     public partial class Guest
     {
+        public Guest()
+        {
+            Attendees = new HashSet<Attendee>();
+        }
+
+        [Key]
         public int GuestId { get; set; }
 
         public string Email { get; set; }
@@ -18,5 +23,7 @@ namespace TakeOrDine.Models.DB
 
         [Required]
         public string Name { get; set; }
+
+        public virtual ICollection<Attendee> Attendees { get; set; }
     }
 }
