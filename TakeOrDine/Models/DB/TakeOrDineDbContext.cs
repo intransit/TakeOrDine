@@ -76,10 +76,10 @@ namespace TakeOrDine.Models.DB
                 .Property(e => e.PhoneNumber)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Host>()
-                .HasMany(e => e.ManageListings)
-                .WithRequired(e => e.Hosts)
-                .WillCascadeOnDelete(false);
+            //modelBuilder.Entity<Host>()
+              //  .HasMany(e => e.ManageListings)
+              //  .WithRequired(e => e.Hosts)
+              //  .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<ManageListing>()
                 .Property(e => e.DineType)

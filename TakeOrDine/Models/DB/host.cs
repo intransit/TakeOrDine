@@ -10,7 +10,7 @@ namespace TakeOrDine.Models.DB
     {
         public Host()
         {
-            ManageListings = new HashSet<ManageListing>();
+           // ManageListings = new HashSet<ManageListing>();
         }
 
         [Key]
@@ -50,6 +50,6 @@ namespace TakeOrDine.Models.DB
 
         public double? Rating { get; set; }
 
-        public virtual ICollection<ManageListing> ManageListings { get; set; }
+       // public virtual ICollection<ManageListing> ManageListings { get; set; }
     }
 }
