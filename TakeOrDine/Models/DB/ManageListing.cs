@@ -10,7 +10,6 @@ namespace TakeOrDine.Models.DB
     {
         public ManageListing()
         {
-            Attendees = new HashSet<Attendee>();
         }
 
         [Key]
@@ -38,10 +37,6 @@ namespace TakeOrDine.Models.DB
 
         public string Menu { get; set; }
 
-        public int? DeadlineOffsetInHrs { get; set; }
-
-        public virtual ICollection<Attendee> Attendees { get; set; }
-
-        public virtual Host Hosts { get; set; }
+        public int DeadlineOffsetInHrs { get; set; }
     }
 }

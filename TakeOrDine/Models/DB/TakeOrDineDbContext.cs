@@ -100,11 +100,6 @@ namespace TakeOrDine.Models.DB
             modelBuilder.Entity<ManageListing>()
                 .Property(e => e.Menu)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<ManageListing>()
-                .HasMany(e => e.Attendees)
-                .WithRequired(e => e.ManageListings)
-                .WillCascadeOnDelete(false);
         }
     }
 }
