@@ -76,11 +76,6 @@ namespace TakeOrDine.Models.DB
                 .Property(e => e.PhoneNumber)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Host>()
-                .HasMany(e => e.ManageListings)
-                .WithRequired(e => e.Hosts)
-                .WillCascadeOnDelete(false);
-
             modelBuilder.Entity<ManageListing>()
                 .Property(e => e.DineType)
                 .IsUnicode(false);
@@ -100,11 +95,6 @@ namespace TakeOrDine.Models.DB
             modelBuilder.Entity<ManageListing>()
                 .Property(e => e.Menu)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<ManageListing>()
-                .HasMany(e => e.Attendees)
-                .WithRequired(e => e.ManageListings)
-                .WillCascadeOnDelete(false);
         }
     }
 }
