@@ -50,6 +50,8 @@ namespace TakeOrDine.Models.DB
 
         public double? Rating { get; set; }
 
+        [Required]
+        public string Provider { get; set; }
        // public virtual ICollection<ManageListing> ManageListings { get; set; }
     }
 }

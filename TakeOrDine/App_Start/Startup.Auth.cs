@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
+using Microsoft.Owin.Security.Facebook;
 using Owin;
 using TakeOrDine.Models;
 
@@ -53,10 +54,15 @@ namespace TakeOrDine
             //app.UseTwitterAuthentication(
             //   consumerKey: "",
             //   consumerSecret: "");
+            var x = new FacebookAuthenticationOptions();
+            x.Scope.Add("email");
+            x.AppId = "857421317651151";
+            x.AppSecret = "cbfbbd978ac83d406a073c391eb75956";
+            app.UseFacebookAuthentication(x);
 
-            app.UseFacebookAuthentication(
-               appId: "857421317651151",
-               appSecret: "cbfbbd978ac83d406a073c391eb75956");
+            //app.UseFacebookAuthentication(
+            //   appId: "857421317651151",
+            //   appSecret: "cbfbbd978ac83d406a073c391eb75956",x);
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
